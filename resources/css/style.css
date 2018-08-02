@@ -1,0 +1,1016 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+
+
+body {
+    background: #fcfcfc;
+    /*font-family: 'guardian egyptian', Helvetica, Arial, verdana, sans-serif;*/
+    /*font-family: @import url('https://fonts.googleapis.com/css?family=Cabin');*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.display-none {
+    display: none;
+}
+
+.container {
+    width: 72%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    background: black;
+    z-index: 10;
+}
+
+iframe:-webkit-full-screen {
+    max-height: 100%;
+}
+
+iframe:-moz-full-screen {
+    max-height: 100%;
+}
+
+.mileSton {
+    position: relative;
+    width: 5%;
+    height: auto;
+    /*border: 1px solid black;*/
+    display: inline-block;
+    margin-left: 6%;
+    cursor: pointer;
+}
+
+.mileSton img {
+    width: 100%;
+}
+
+.mileStonDisable {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.mileStonEnable {
+    opacity: 1;
+}
+
+.Bike01 img {
+    width: 50%;
+    height: auto;
+    position: relative;
+    margin-left: 258px;
+    background-size: 100%;
+    padding: 10px;
+}
+
+.mileStones {
+    /* width: 50px;
+    height: 50px;
+    border: 1px solid black;*/
+    z-index: 20;
+}
+
+.mileSonesContainer {
+    margin: -7px auto;
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+
+
+.road {
+    width: 100%;
+    height: auto;
+    position: relative
+}
+
+.road img {
+    width: 100%;
+}
+
+.Bike-anim {
+
+    position: absolute;
+    z-index: 999;
+    width: 9% !important;
+    bottom: 0px;
+
+    animation-name: moving;
+    animation: moving 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving {
+    0% {
+        left: -80px
+    }
+    100% {
+        left: 2%;
+    }
+}
+
+.bikeMoves1 {
+    animation-name: moving1;
+    animation: moving1 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving1 {
+    0% {
+        left: 2%;
+    }
+    100% {
+        left: 13%;
+    }
+}
+
+.bikeMoves2 {
+    animation-name: moving2;
+    animation: moving2 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving2 {
+    0% {
+        left: 13%;
+    }
+    100% {
+        left: 25%;
+    }
+}
+
+.bikeMoves3 {
+    animation-name: moving3;
+    animation: moving3 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving3 {
+    0% {
+        left: 25%;
+    }
+    100% {
+        left: 37%;
+    }
+}
+
+.bikeMoves4 {
+    animation-name: moving4;
+    animation: moving4 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving4 {
+    0% {
+        left: 37%;
+    }
+    100% {
+        left: 48%;
+    }
+}
+
+.bikeMoves5 {
+    animation-name: moving5;
+    animation: moving5 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving5 {
+    0% {
+        left: 48%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+
+.bikeMoves6 {
+    animation-name: moving6;
+    animation: moving6 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving6 {
+    0% {
+        left: 60%;
+    }
+    100% {
+        left: 72%;
+    }
+}
+
+.bikeMoves7 {
+    animation-name: moving7;
+    animation: moving7 2s steps(80) forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes moving7 {
+    0% {
+        left: 72%;
+    }
+    100% {
+        left: 84%;
+    }
+}
+
+.mileTextContainer {
+
+    /*  left: 149px;*/
+    position: relative;
+    text-align: center;
+    height: auto;
+    float: left;
+    width: 100%;
+}
+
+.initialvideo {
+    background-color: #000000;
+}
+
+.milesText {
+    width: 100%;
+    font-size: 12px;
+}
+
+.mileTextVisited h4 {
+    color: #ff0000 !important;
+}
+
+.mileTextVisited p {
+    color: #c55252 !important;
+}
+
+.milesText h4 {
+    color: #eebe08;
+    font-size: 16px;
+}
+
+.milesText p {
+    color: #efd987;
+}
+
+.milestoneText {
+    display: inline-block;
+    float: left;
+    margin-top: 8px;
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.milesText01 {
+    margin-left: 14%;
+}
+
+.milesText02 {
+    margin-left: 1%;
+}
+
+.milesText03 {
+    margin-left: 2%;
+}
+
+.milesText04 {
+    margin-left: 2%;
+}
+
+.milesText05 {
+    margin-left: 2%;
+}
+
+.milesText06 {
+    margin-left: 1%;
+}
+
+.milesText07 {
+    margin-left: 1%;
+}
+
+.textGray {
+    position: relative;
+    margin-left: 10px;
+    width: 4%;
+    height: 82%;
+    float: left;
+    color: black;
+    background-color: #e0e0e0;
+}
+
+.textGray p {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    transform: rotate(-90deg);
+}
+
+.courseTitles {
+    height: 80.2%;
+    width: 90%;
+    float: right;
+    background: transparent;
+    float: left;
+    background: url(../img/engin_outer1.jpg) no-repeat;
+}
+
+.videoLink {
+    height: 32px;
+    width: 50%;
+    float: left;
+}
+
+.stripEnable {
+    cursor: pointer;
+}
+
+.stripEnable:hover {
+    background: rgba(241, 188, 94, 0.5);
+}
+
+button {
+    cursor: pointer;
+}
+
+.playButton {
+    font-size: 13px;
+}
+
+.videoText {
+    font-size: 18px;
+}
+
+.tick {
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    margin: auto;
+    height: 5px;
+}
+
+.striplink {
+    position: relative;
+    padding: 5px 15px;
+    width: 100%;
+    text-align: left;
+    background-color: rgba(98, 103, 106, 0.9);
+    border: none;
+    color: #f1bf34;
+    font-family: guardian egyptian;
+}
+
+.striplink02 {
+    position: relative;
+    padding: 5px 15px;
+    width: 100%;
+    text-align: left;
+    background-color: rgba(98, 103, 106, 0.5);
+    border: none;
+    color: #f1bf34;
+    font-family: guardian egyptian;
+}
+
+.instructionText {
+    display: inline-block;
+    position: relative;
+    margin-top: 32px;
+    bottom: 0px;
+    right: 42px;
+    color: red;
+    font-style: italic;
+    float: right;
+}
+
+.instructionText01 {
+    position: relative;
+    color: red;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.navigation {
+    width: 100%;
+    background-color: black;
+    height: 10%;
+    position: relative;
+    background: url(../img/SL-PLayer03.png) no-repeat;
+    background-size: 100%;
+    color: white;
+}
+
+.navigation-video {
+    z-index: 99;
+    width: 100%;
+    background-color: black;
+    height: 10%;
+    position: absolute;
+    background: url(../img/SL-PLayer03.png) no-repeat;
+    background-size: 100%;
+}
+
+.nav-text {
+    width: 800px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.exit-container {
+    width: 50px;
+    height: 45px;
+    padding-left: 1%;
+    padding-top: 1%;
+    float: right;
+}
+
+.exit {
+    cursor: pointer;
+    width: 23px;
+    height: 25px;
+    background: url(../img/PowerOff.png) no-repeat;
+    z-index: 999;
+}
+
+
+
+/******* Test Mob******************
+.exit-window {
+    cursor: pointer;
+    width: 23px;
+    height: 25px;
+    background: url(../img/PowerOff.png) no-repeat;
+    z-index: 999;
+}
+/******* Test Mob*******************/
+
+
+.popup-overlay .exitButton {
+    background: red;
+    padding: 8px 20px;
+    color: white;
+}
+
+.popup-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.67);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    /*background: url(../img/Intro02.png) no-repeat;*/
+    background-size: cover;
+}
+
+.Popup-box {
+    background: rgba(0, 0, 0, 0.88);
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 39%;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px #eebe08 solid;
+}
+
+.Popup-wrap {
+    text-align: center;
+    width: 100%;
+}
+
+.Popup-wrap h4 {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-family: guardian egyptian;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.popup-overlay .close-text {
+    color: red;
+    font-family: guardian egyptian;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.popup-overlay-suspend {
+    width: 100%;
+    height: 100%;
+    background: rgba(105, 53, 53, 0.45);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    background: url(../img/Intro02.png) no-repeat;
+    background-size: cover;
+}
+
+.popup-overlay-suspend .yesNoButton {
+    background: red;
+    padding: 8px 20px;
+    color: white;
+}
+
+.popup-overlay-confirm {
+    width: 100%;
+    height: 100%;
+    /*background: rgba(168, 168, 168, 0.45);*/
+    background: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.popup-overlay-confirm .yesNoButton {
+    background: red;
+    padding: 8px 20px;
+    color: white;
+}
+
+.popup-overlay-congrats .exitButton {
+    background: red;
+    padding: 8px 20px;
+    color: white;
+}
+
+.popup-overlay-congrats {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    background-size: cover;
+    z-index: 1000;
+}
+
+
+/******* Test Mob*******************
+.popup-overlay-window-close .exitButton {
+    background: red;
+    padding: 8px 20px;
+    color: white;
+}
+
+.popup-overlay-window-close {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0 auto;
+    background-size: cover;
+    z-index: 1000;
+}
+
+.popup-overlay-window-close h5 {
+    color: white;
+}
+
+/******* Test Mob*******************/
+
+.nav-logo {
+    float: left;
+}
+
+.goButton {
+    background: red;
+    color: white;
+    position: relative;
+    padding: 12px;
+}
+
+#listBox1 {
+    padding: 10px 25px;
+}
+
+.backButton {
+    background: red;
+    padding: 8px 20px;
+    color: white;
+    position: absolute;
+    right: 55px;
+    bottom: 5px;
+}
+
+.bgimg {
+    position: center;
+    top: 0px;
+    left: 0px;
+    background: url('../img/PAA_image.jpg') no-repeat;
+    background-position: center;
+}
+
+#listBox {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1000000;
+}
+
+/*Commented by Chetan to resolve play button not hiding on chrome*/
+.Windows video::-webkit-media-controls-panel {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+#translator {
+    width: 98%;
+    height: 93%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+}
+
+.translator {}
+
+#initialPage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #FFFFFF;
+}
+
+iframe {
+    border: none !important;
+    background-color: #F7F7F7;
+}
+
+.coursename {
+    width: 75%;
+    position: relative;
+    /*top: 150px;*/
+    padding: 0px 0px;
+    /* font-family: , Arial, Helvetica, sans-serif;*/
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.selectLanguage {
+    width: 100%;
+    position: relative;
+    /*top: 250px;*/
+    padding: 10px 0px;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    color: red;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.languageSelect {
+    height: 100%;
+    background-size: cover;
+    background: url('../img/Map01.png') no-repeat;
+    background-position: center;
+}
+
+.character {
+    width: 40%;
+    height: 80%;
+    position: relative;
+    float: left;
+}
+
+.clearFix {
+    clear: both;
+}
+
+.character img {
+    /*width: 68%;*/
+    height: 98%;
+    position: absolute;
+    bottom: 0;
+    top: 105;
+    left: 114;
+    right: 0;
+    margin: auto;
+}
+
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    font-family: guardian egyptian;
+    color: #eebe08;
+    background-color: #414040;
+    cursor: default;
+    padding: 10px 30px;
+    border-width: 1px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+
+.welcomeContainer {
+    height: 35%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    line-height: 35px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 35px 0 50px 40px;
+    /*line-height: 40px;*/
+    box-sizing: border-box;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    background: #256eb3;
+    background-image: -webkit-linear-gradient(top, #256eb3, #0056a6);
+    background-image: -moz-linear-gradient(top, #256eb3, #0056a6);
+    background-image: -ms-linear-gradient(top, #256eb3, #0056a6);
+    background-image: -o-linear-gradient(top, #256eb3, #0056a6);
+    background-image: linear-gradient(to bottom, #256eb3, #0056a6);
+    -webkit-box-shadow: 1px 1px 2px #666666;
+    -moz-box-shadow: 1px 1px 2px #666666;
+    box-shadow: 1px 1px 2px #666666;
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 25px 10px 25px;
+    border: solid #1f628d 1px;
+    text-decoration: none;
+    line-height: 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #0056a6;
+    background-image: -webkit-linear-gradient(top, #0056a6, #256eb3);
+    background-image: -moz-linear-gradient(top, #0056a6, #256eb3);
+    background-image: -ms-linear-gradient(top, #0056a6, #256eb3);
+    background-image: -o-linear-gradient(top, #0056a6, #256eb3);
+    background-image: linear-gradient(to bottom, #0056a6, #256eb3);
+    text-decoration: none;
+}
+
+.button1 {
+    top: 0px;
+}
+
+.button2 {
+    top: 40px;
+}
+
+.button3 {
+    top: 80px;
+}
+
+.button4 {
+    top: 120px;
+}
+
+.button5 {
+    top: 160px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .welcomeContainer {
+        /*background: green;*/
+        height: 45%;
+    }
+    .character img {
+        height: 85%;
+        left: 0;
+    }
+    .languageSelect {
+        height: auto;
+    }
+    .exit {
+        background: url(../img/PowerOff-medium.png) no-repeat;
+    }
+
+    .Bike01 img {
+        margin-left: 189px;
+    }
+
+    .exit-container {
+        padding-left: 27px;
+        padding-top: 0.7%;
+        margin-right: -3%;
+    }
+    .nav-text {
+        width: 350px;
+    }
+    .tick {
+        top: 4px;
+        color: #f1bf34;
+    }
+    .playButton {
+        color: #f1bf34;
+    }
+    .courseTitles {
+        height: 65%;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 825px) and (max-width: 1024px) and (orientation: portrait) {
+    .welcomeContainer {
+        background: green; 
+        bottom: 198px;
+    }
+    .languageSelect {
+        background-position: initial;
+    }
+    select {
+        font-size: 13px;
+    }
+    .character img {
+        height: 64%;
+        bottom: 350px;
+    }
+    .videoText {
+        font-size: 7px;
+    }
+    .nav-text {
+        padding: 4px;
+    }
+    .exit {
+        background: url(../img/PowerOff-small.png) no-repeat;
+    }
+}
+
+
+@media screen and (max-width: 824px) and (min-width: 320px) {
+    .welcomeContainer {
+        /* background: yellow;  */
+        line-height: 18px;
+        height: 75%;
+    }
+    .languageSelect {
+        background: url('../img/Map01-small.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    select {
+        font-size: 9px;
+    }
+
+    .goButton {
+        padding: 9px;
+    }
+    .coursename {
+        font-size: 17px;
+    }
+
+    .selectLanguage {
+        font-size: 11px;
+    }
+    .character img {
+        left: 36px;
+        top: 35px;
+    }
+
+    .Bike01 img {
+        /*width: 49%;*/
+        margin-left: 142px;
+        height: 42%;
+    }
+
+    .milesText06 {
+        margin-left: 2%;
+    }
+    .exit {
+        background: url(../img/PowerOff-small.png) no-repeat;
+        background-position: 0 2px;
+        display: inline-block;
+        margin-top: 5px;
+        float: right;
+        position: absolute;
+        margin-left: -41px;
+    }
+
+    .textGray p {
+        font-size: 9px;
+    }
+
+    .instructionText {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .instructionText0 {
+        margin-bottom: 3px;
+    }
+    .instructionText01 {
+        font-size: 10px;
+    }
+    .videoText {
+        font-size: 5px;
+    }
+    .courseTitles {
+        height: 65%;
+        overflow: auto;
+    }
+    .playButton {
+        font-size: 12px;
+    }
+
+    .tick {
+        padding: 1px;
+        right: 7px;
+        top: 0px;
+    }
+
+    .striplink {
+        padding: 2px 15px;
+    }
+    .striplink02 {
+        padding: 1px 15px;
+    }
+    .videoLink {
+        height: 19px;
+    }
+    .nav-text {
+        height: fit-content;
+        width: 220px;
+        font-size: 66%;
+        padding: 5px;
+    }
+    .exit-container {
+        width: 21px;
+        padding-top: 0;
+        box-sizing: border-box;
+    }
+
+    .milesText p {
+        font-size: 10px;
+    }
+
+    .Popup-box {
+        top: 24%;
+    }
+}
+
+@media screen and (max-width: 750px) and (min-width: 320px) {
+
+    .exit {
+        background: url(../img/PowerOff-small.png) no-repeat;
+        background-position: 0 2px;
+        margin-left: -1%;
+        display: inline-block;
+        margin-top: 0%;
+        float: left;
+    }
+    select {
+        font-size: 5px;
+    }
+}

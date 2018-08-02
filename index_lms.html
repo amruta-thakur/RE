@@ -1,0 +1,290 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/style.css" />
+    <script type="text/javascript" src="./resources/js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="./resources/js/Device.js"></script>
+</head>
+
+<body id="body" onload="initLMS()" onunload="terminateCommunication()" onbeforeunload="terminateCommunication()">
+    <!-- ========== container ========== -->
+    <div class="container">
+        <!--  <img src="resources/img/SL-PLayer.png" /> -->
+        <div class="translator display-none">
+            <div class="navigation">
+                <div class="exit-container">
+                    <div class="exit"></div>
+                </div>
+            </div>
+            <video id="translator" width="100%" height="100%" controls controlsList="nodownload">
+            </video>
+        </div>
+        <div class="popup-overlay  display-none">
+            <div class="Popup-box">
+                <div class="Popup-wrap">
+                    <h4></h4>
+                    <button type="button" id="lastVideoEndExit" class="exitButton"></button>
+                    <div class="close-text"></div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-overlay-confirm  display-none">
+            <div class="Popup-box">
+                <div class="Popup-wrap">
+                    <h4>Are you sure you want to exit?</h4>
+                    <button type="button" class="yesButtonConfirm yesNoButton">Yes</button>
+                    <button type="button" class="noButtonConfirm yesNoButton">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup-overlay-congrats  display-none">
+            <div class="Popup-box">
+                <div class="Popup-wrap">
+                    <button type="button" class="exitButton congratsOk">Ok</button>
+                </div>
+            </div>
+        </div>
+
+        <!--/******* Test Mob*******************/
+        <div class="popup-overlay-window-close  display-none">
+            <div class="Popup-box">
+                <div class="Popup-wrap">
+                    <button type="button" class="exitButton windowClose">Ok</button>
+                </div>
+            </div>
+        </div>
+        <-/******* Test Mob*******************/-->
+
+        <div id="initialPage">
+            <!-- initialPage -->
+            <div class="initialvideo">
+                <div class="navigation navigation-video"></div>
+                <video id="introVideo1" class="introVideo" width="100%" height="100%" controls controlsList="nodownload" autoplay>
+                    <source src="resources/video/Royal_Enfield_Intro_Video_V2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="languageSelect display-none">
+                <div class="navigation"></div>
+                <div class="character">
+                    <img src="resources/img/Picture3.png" />
+                </div>
+                <div class="welcomeContainer">
+                    <div class="coursename">Welcome to the Periodic Maintenance Inspection</div>
+                    <div class="selectLanguage">Click the Go button to start.</div>
+                    <div class="buttonsWrapper">
+                        <button type="button" class="goButton">Go</button>
+                    </div>
+                </div>
+                <div class="clearFix"></div>
+            </div>
+        </div>
+        <!-- End   initialPage -->
+        <!-- suspend data popup -->
+        <div class="popup-overlay-suspend display-none">
+            <div class="Popup-box">
+                <div class="Popup-wrap">
+                    <h4>Do you want to resume to the last service visited?</h4>
+                    <button type="button" class="yesButton yesNoButton">Yes</button>
+                    <button type="button" class="noButton yesNoButton">No</button>
+                </div>
+            </div>
+        </div>
+        <!-- end suspend data popup -->
+        <!-- Mile Stone  -->
+        <div class="mileStones display-none">
+            <div class="navigation"></div>
+            <div class="Bike01">
+                <img src="resources/img/Layer-2.png" no-repeat/>
+            </div>
+            <div class="mileSonesContainer">
+                <div id="mileStone1" class="mileSton" data-id="1">
+                    <img src="resources/img/Artboard2.png" style="cursor:pointer;" />
+                </div>
+                <div id="mileStone2" class="mileSton" data-id="2">
+                    <img src="resources/img/Artboard3.png" />
+                </div>
+                <div id="mileStone3" class="mileSton" data-id="3">
+                    <img src="resources/img/Artboard4.png" />
+                </div>
+                <div id="mileStone4" class="mileSton" data-id="4">
+                    <img src="resources/img/Artboard5.png" />
+                </div>
+                <div id="mileStone5" class="mileSton" data-id="5">
+                    <img src="resources/img/Artboard6.png" />
+                </div>
+                <div id="mileStone6" class="mileSton" data-id="6">
+                    <img src="resources/img/Artboard8.png" />
+                </div>
+                <div id="mileStone7" class="mileSton" data-id="7">
+                    <img src="resources/img/Artboard9.png" />
+                </div>
+            </div>
+            <div id="bike" class="bikeAudio">
+                <audio id="bikeSound" src="resources/audio/driving-sound.mp3" preload="auto" autoplay>
+                </audio>
+            </div>
+            <div class="road">
+                <img src="resources/img/Road.png" />
+                <img src="resources/img/Bike.png" class="Bike-anim" />
+            </div>
+            <!-- Service Text -->
+            <div class="mileTextContainer">
+                <div class="milesText">
+                    <div class="milesText01 milestoneText" data-id="1" style="cursor:pointer;"></div>
+                    <div class="milesText02 milestoneText" data-id="2"></div>
+                    <div class="milesText03 milestoneText" data-id="3"></div>
+                    <div class="milesText04 milestoneText" data-id="4"></div>
+                    <div class="milesText05 milestoneText" data-id="5"></div>
+                    <div class="milesText06 milestoneText" data-id="6"></div>
+                    <div class="milesText07 milestoneText" data-id="7"></div>
+                </div>
+            </div>
+            <!-- End Service Text -->
+            <div class="instructionText"></div>
+        </div>
+        <!-- End   Mile Stone  -->
+        <!-- Video Links -->
+        <div class="videosLinks display-none">
+            <div class="navigation">
+            
+                <!--/******* Test Mob*******************/-
+                <div  class="exit-container">
+                    <div class="exit-window"></div>
+                </div>
+                </******* Test Mob*******************/-->
+
+            </div>
+            <div class="instructionText01"></div>
+            <div class="textGrayContainer"></div>
+            <div class="courseTitles">
+                <div id="video1" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654;  &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video2" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video3" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video4" class="videoLink ">
+                    <button class="stripEnable" class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video5" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video6" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video7" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video8" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video9" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video10" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video11" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video12" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video13" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span> <span class="tick"></span></button>
+                </div>
+                <div id="video14" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video15" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video16" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span></span> <span class="tick"></span></button>
+                </div>
+                <div id="video17" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span> <span class="tick"></span></button>
+                </div>
+                <div id="video18" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span> <span class="tick"></span></button>
+                </div>
+                <div id="video19" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video20" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span> <span class="tick"></span></button>
+                </div>
+                <div id="video21" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video22" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span> <span class="tick"></span></button>
+                </div>
+                <div id="video23" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span> <span class="tick"></span></button>
+                </div>
+                <div id="video24" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video25" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video26" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video27" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video28" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video29" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video30" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video31" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;&nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video32" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+                <div id="video33" class="videoLink ">
+                    <button class="stripEnable"><span class="playButton">&#9654; &nbsp;</span><span class="videoText"></span><span class="tick"></span></button>
+                </div>
+            </div>
+            <div class="clearFix"></div>
+            <button type="button" class="backButton"></button>
+        </div>
+        <!--  End  Video Links -->
+    </div>
+    <!--========== container ========== -->
+    <script type="text/javascript" src="./resources/js/data.js"></script>
+    <script type="text/javascript" src="./resources/api/SCORM12Wrapper.js"></script>
+    <script type="text/javascript" src="./resources/js/main.js"></script>
+    <script>
+    Device.getDevice();
+    initLMS = function() {
+        
+        scorm_initialize = initializeCommunication();
+       
+        if (scorm_initialize == "true") {
+
+            SCORM_SuspendData();
+        }
+    }
+    </script>
+    <script>
+    $("body").on("contextmenu", function(e) {
+        return false;
+    });
+    </script>
+</body>
+
+</html>
